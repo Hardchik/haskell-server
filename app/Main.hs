@@ -1,4 +1,3 @@
--- main.hs
 module Main (main) where
 
 -- {-# LANGUAGE OverloadedStrings #-}
