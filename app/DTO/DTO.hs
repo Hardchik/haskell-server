@@ -7,6 +7,7 @@ import Data.Aeson.Types (Key)
 import Data.Text (Text)
 import qualified Data.Text as T
 import Data.String (fromString)
+import Data.Time (UTCTime)
 
 -- Define UserDTO
 data UserDTO = UserDTO
