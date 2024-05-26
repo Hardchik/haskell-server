@@ -47,19 +47,22 @@ library
 executable simple-server-exe
   main-is: Main.hs
   other-modules:
-      Greeting.Controller
-      Greeting.RouteHandler
-      Greeting.Service
-      NotFound.Controller
-      NotFound.RouteHandler
-      NotFound.Service
-      Post.RouteHandler
-      Post.Service
-      Request.RouteHandler
-      Request.Service.DeleteService
-      Request.Service.GetService
-      Request.Service.PostService
-      Request.Service.PutService
+      DTO.DTO
+      Middleware.Middleware
+      Module.Greeting.Controller
+      Module.Greeting.RouteHandler
+      Module.Greeting.Service
+      Module.NotFound.Controller
+      Module.NotFound.RouteHandler
+      Module.NotFound.Service
+      Module.Post.RouteHandler
+      Module.Post.Service
+      Module.Request.Controller.PostController
+      Module.Request.RouteHandler
+      Module.Request.Service.DeleteService
+      Module.Request.Service.GetService
+      Module.Request.Service.PostService
+      Module.Request.Service.PutService
       Paths_simple_server
   autogen-modules:
       Paths_simple_server

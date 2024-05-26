@@ -1,4 +1,4 @@
-module Post.Service (processPostRequest) where
+module Module.Post.Service (processPostRequest) where
 
 import Network.Wai (Request(..), strictRequestBody)
 import Network.HTTP.Types (Method, methodPost)
