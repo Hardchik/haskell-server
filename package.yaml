@@ -1,0 +1,72 @@
+name: simple-server
+version: 0.1.0.0
+github: "githubuser/simple-server"
+license: BSD-3-Clause
+author: "Author name here"
+maintainer: "example@example.com"
+copyright: "2024 Author name here"
+
+extra-source-files:
+  - README.md
+  - CHANGELOG.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description: Please see the README on GitHub at <https://github.com/githubuser/simple-server#readme>
+
+dependencies:
+  - base >= 4.7 && < 5
+  - warp >= 3.2.30
+  - wai >= 3.2.1
+  - http-types >= 0.12.3
+  - bytestring >= 0.10.8.2
+  - network >= 3.0.0
+  - aeson
+  - text
+
+# extra-deps:
+#   - warp-3.3.13
+#   - wai-3.2.3
+#   - http-types-0.12.3
+#   - bytestring-0.10.12.0
+
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Widentities
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wmissing-export-lists
+  - -Wmissing-home-modules
+  - -Wpartial-fields
+  - -Wredundant-constraints
+
+library:
+  source-dirs: src
+
+executables:
+  simple-server-exe:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - simple-server
+
+tests:
+  simple-server-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - simple-server
