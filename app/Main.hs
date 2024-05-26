@@ -1,4 +1,3 @@
--- main.hs
 module Main (main) where
 
 -- {-# LANGUAGE OverloadedStrings #-}
@@ -10,10 +9,10 @@ import qualified Data.Text as T
 -- import Data.Aeson (object, (.=))
 import Data.Text (Text)
 -- import qualified Data.Text.IO as TIO
-import Greeting.RouteHandler (greetingHandler)
-import Post.RouteHandler (postHandler)
-import Request.RouteHandler (requestHandler)
-import NotFound.RouteHandler (notFoundHandler)
+import Module.Greeting.RouteHandler (greetingHandler)
+import Module.Post.RouteHandler (postHandler)
+import Module.Request.RouteHandler (requestHandler)
+import Module.NotFound.RouteHandler (notFoundHandler)
 
 -- Define routes
 routes :: [([Text], Application)]

@@ -1,11 +1,12 @@
-module Request.RouteHandler (requestHandler) where
+
+module Module.Request.RouteHandler (requestHandler) where
 
 import Network.Wai (responseLBS, requestMethod, Application, Response, ResponseReceived)
 import Network.HTTP.Types (hContentType, status405, methodGet, methodPost, methodPut, methodDelete)
-import qualified Request.Service.PostService as PostService
-import qualified Request.Service.GetService as GetService
-import qualified Request.Service.PutService as PutService
-import qualified Request.Service.DeleteService as DeleteService
+import qualified Module.Request.Controller.PostController as PostController
+import qualified Module.Request.Service.GetService as GetService
+import qualified Module.Request.Service.PutService as PutService
+import qualified Module.Request.Service.DeleteService as DeleteService
 import Data.Aeson (encode, object, (.=))
 import qualified Data.ByteString.Char8 as B
 import Data.Aeson.Types (Key)
@@ -15,7 +16,7 @@ requestHandler :: Application
 requestHandler req respond = do
     let reqMethod = requestMethod req
     if reqMethod == methodPost
-        then PostService.handlePost req respond
+        then PostController.handlePostRequest requestHandler req respond
         else if reqMethod == methodGet
             then GetService.handleGet req respond
             else if reqMethod == methodPut

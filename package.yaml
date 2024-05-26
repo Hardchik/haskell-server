@@ -28,6 +28,12 @@ dependencies:
   - network >= 3.0.0
   - aeson
   - text
+  - mtl
+  - transformers
+  - persistent
+  - persistent-postgresql
+  - persistent-template
+  - time
 
 # extra-deps:
 #   - warp-3.3.13

@@ -1,4 +1,4 @@
-module Post.RouteHandler (postHandler) where
+module Module.Post.RouteHandler (postHandler) where
 
 import Network.Wai (Application, responseLBS)
 import Network.HTTP.Types (status200, status404, hContentType)
@@ -7,7 +7,7 @@ import qualified Data.ByteString.Lazy as LB
 import Data.Aeson (encode, object, (.=), decode)
 import Data.Aeson.Types (Key, Value)
 import Data.String (fromString)
-import Post.Service (processPostRequest)
+import Module.Post.Service (processPostRequest)
 
 postHandler :: Application
 postHandler req respond = do

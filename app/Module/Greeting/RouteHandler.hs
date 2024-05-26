@@ -1,8 +1,8 @@
-module Greeting.RouteHandler (greetingHandler) where
+module Module.Greeting.RouteHandler (greetingHandler) where
 
 import Network.Wai
 import Network.HTTP.Types (status200, hContentType)
-import Greeting.Controller (getGreetingHandler)
+import Module.Greeting.Controller (getGreetingHandler)
 import Data.Aeson.Types (Key)
 import Data.String (fromString)
 import Data.Aeson (encode, object, (.=))

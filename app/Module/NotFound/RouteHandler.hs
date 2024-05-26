@@ -1,8 +1,8 @@
-module NotFound.RouteHandler (notFoundHandler) where
+module Module.NotFound.RouteHandler (notFoundHandler) where
 
 import Network.Wai
 import Network.HTTP.Types (status404, hContentType)
-import NotFound.Controller (getNotFoundHandler)
+import Module.NotFound.Controller (getNotFoundHandler)
 import Data.Aeson.Types (Key)
 import Data.String (fromString)
 import Data.Aeson (encode, object, (.=))
