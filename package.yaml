@@ -37,6 +37,7 @@ dependencies:
   - time
   - monad-logger
   - process
+  - hedis
 
 # extra-deps:
 #   - warp-3.3.13
