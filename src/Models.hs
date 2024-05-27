@@ -27,5 +27,6 @@ share
 User json
     username Text
     email Text
+    UniqueUserUsername username
     deriving Show Eq
 |]

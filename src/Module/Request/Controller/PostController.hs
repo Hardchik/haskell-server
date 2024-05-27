@@ -5,12 +5,13 @@ import Module.Request.Service.PostService (handlePost)
 import Middleware.Middleware (validateJsonBody)
 import DTO.DTO (UserDTO)
 import Data.Aeson.Types (Value)
+import Database.Persist.Sql (ConnectionPool)
 
 -- Define a function to handle post requests in the controller
-handlePostRequest :: Application -> Request -> (Response -> IO ResponseReceived) -> IO ResponseReceived
-handlePostRequest app req respond = validateJsonBody handlePostLogic req respond
+handlePostRequest :: ConnectionPool -> Request -> (Response -> IO ResponseReceived) -> IO ResponseReceived
+handlePostRequest pool req respond = validateJsonBody (handlePostLogic pool) req respond
 
 
 -- Define a function to handle the logic after validating the request body
-handlePostLogic :: UserDTO -> Application
-handlePostLogic jsonData req respond = handlePost jsonData req respond
+handlePostLogic :: ConnectionPool -> UserDTO -> Application
+handlePostLogic pool jsonData req respond = handlePost pool jsonData req respond
