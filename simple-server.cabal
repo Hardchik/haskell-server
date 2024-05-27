@@ -44,6 +44,7 @@ library
       Module.Request.Service.GetService
       Module.Request.Service.PostService
       Module.Request.Service.PutService
+      Redis
   other-modules:
       Paths_simple_server
   autogen-modules:
@@ -55,6 +56,7 @@ library
       aeson
     , base >=4.7 && <5
     , bytestring >=0.10.8.2
+    , hedis
     , http-types >=0.12.3
     , monad-logger
     , mtl
@@ -84,6 +86,7 @@ executable simple-server-exe
       aeson
     , base >=4.7 && <5
     , bytestring >=0.10.8.2
+    , hedis
     , http-types >=0.12.3
     , monad-logger
     , mtl
@@ -115,6 +118,7 @@ test-suite simple-server-test
       aeson
     , base >=4.7 && <5
     , bytestring >=0.10.8.2
+    , hedis
     , http-types >=0.12.3
     , monad-logger
     , mtl
