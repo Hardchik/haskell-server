@@ -28,7 +28,7 @@ routes :: ConnectionPool -> Connection -> [([Text], Application)]
 routes pool redisConn =
     [ ([T.pack "greeting"], greetingHandler)
     , ([T.pack "post"], postHandler)
-    , ([T.pack "request"], requestHandler)
+    , ([T.pack "request"], requestHandler pool)
     , ([T.pack "unknown"], notFoundHandler)
     , ([T.pack "redis", T.pack "save"], saveHandler redisConn)
     , ([T.pack "redis", T.pack "delete"], deleteHandler redisConn)
