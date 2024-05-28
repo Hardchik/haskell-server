@@ -39,6 +39,7 @@ library
       Module.Post.RouteHandler
       Module.Post.Service
       Module.Request.Controller.PostController
+      Module.Request.Controller.PutController
       Module.Request.RouteHandler
       Module.Request.Service.DeleteService
       Module.Request.Service.GetService
