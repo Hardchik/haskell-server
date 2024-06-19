@@ -38,6 +38,7 @@ dependencies:
   - monad-logger
   - process
   - hedis
+  - amqp
 
 # extra-deps:
 #   - warp-3.3.13
